@@ -19,7 +19,7 @@ public class ECommerceFacade {
     }
 
     public void placeOrder(Product baseProduct, Product finalProduct, String email) {
-        System.out.println("Checking stock for: " + baseProduct.getDescription());
+        inventory.checkStock(baseProduct);
 
         payment.processPayment(email, finalProduct.getPrice());
 
